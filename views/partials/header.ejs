@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- VIEWPORT -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/">
+    
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- INCLUDING CSS FILES -->
+    <link rel="stylesheet" href="stylesheets/header.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/landing.css">
+    <link rel="stylesheet" href="stylesheets/form.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"
+        async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Stubble</title>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-survival101">
+        <div class="container">
+            <a class="navbar-brand" href="/">Stubble Management</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
+                aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="navbar-nav ml-auto">                   
+                    <%if(!currentUser){%>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">My Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                    <%}else{%>
+                    <li class="nav-item">
+                        <a class="nav-link">Signed In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-user" aria-hidden="true"></i> User Management <span
+                                class="dropdown-toggle"></span></a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="#"><i class="fa fa-user" aria-hidden="true"></i> User
+                                    Account</a>
+                            </li>
+                            <li>
+                                <a href="/logout"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-phone-volume"></i> Contact us</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <%}%>    
+                </ul>
+            </div>
+        </div>                          
+    </nav>
+
+    <div class="container">
+
+        <!-- ERROR MESSAGE -->
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger errorMsg" role="alert">
+                <i class="fa fa-times-circle"></i>
+                <%= error %>
+            </div>
+        <% } %>
+
+        <!-- SUCCESS MESSAGE -->
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success successMsg" role="alert">
+                <i class="fa fa-check"></i>
+                <%= success %>
+            </div>
+        <% } %>
+
+    </div>
+
+    <script type="text/javascript" src="../../public/javascripts/header.js"></script>
+

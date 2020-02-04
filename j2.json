@@ -1,0 +1,5 @@
+{
+    "X":{"organisations":["ABC ORG"],"warehouses":["ABC WAREHOUSE"]},
+    "Y":{"organisations":["XYZ ORG"],"warehouses":["XYZ WAREHOUSE"]},
+    "Z":{"organisations":[],"warehouses":[]}
+}

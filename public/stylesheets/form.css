@@ -1,0 +1,119 @@
+
+
+.form-page .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-page .contact {
+    padding: 1.5% 5% 3% 5%;
+    background-color:white;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.form-page .contact-address ul{
+    padding: 0px;
+}
+
+.form-page .contact-address li {
+    list-style: none;
+}
+
+/* to give the icon some effects */
+.form-page .contact-address i {
+    float: left;
+    font-size: 1.1667em;
+    margin-top:3px;
+    background: #08918e;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    border-radius: 50% 50% 50% 50%;
+    color: #fff;
+    text-align: center;
+}
+
+.form-page .contact-address h4 {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 0px 10px 0px;
+    border-bottom: 1px solid Gray;
+    width: 80%;
+    color: #333;
+    margin-bottom: 26px;
+}
+
+.form-page .style .details {
+    border-bottom: 1px solid #edf6ff;
+    margin-left: 50px;
+    padding-bottom: 15px;
+    padding-left: 15px !important;
+}
+
+.form-page .details h5 {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    color: #08918e;
+}
+
+.form-page .details p {
+    margin: 0 0 10px;
+    font-size: 12px;
+}
+
+.form-page a {
+    color: #08918e;
+    text-decoration: none;
+}
+
+.form-page form {
+    display: block;
+    margin-top: 0em;
+}
+
+.form-page .form-group {
+    margin-bottom: 15px;
+}
+
+.form-page .form-control {
+    width: 100%;
+    height: 42px;
+    color: #555;
+    background-color: #fff;
+}
+
+/* for desktop */
+.form-page .contact-form h5 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid white;
+    width: 80%;
+    color: White;
+}
+
+/* for mobile and tab */
+@media only screen and (max-width: 992px) {
+    .form-page .contact-form h5 {
+        font-size: 16px;
+        padding: 10px 0px 5px 0px;
+    }
+}            
+
+.form-page .contact-form p {
+    color: #FFF;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.form-page .contact-form .button{
+    border-radius: 5px;
+    padding: 5px 20px;
+    margin: 0px 0px 10px 0px;
+}

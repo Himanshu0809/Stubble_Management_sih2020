@@ -1,0 +1,56 @@
+<%- include('./partials/header.ejs'); -%>
+
+<div class="form-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="contact">
+                    <h1 style="text-align: center">Status Page</h1>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div>
+                                <div id="data"></div>
+                                <div>
+                                    <h4> Status : To Be Picked</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 contact-form">
+                            <div>
+                                <form action="/fillForm" method="POST">
+                                    <div class="form-group">
+                                        <h4>Username : </h4>
+                                        <input class="form-control" type="text" name="name" placeholder="Username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <h4>Email Id : </h4>
+                                        <input class="form-control" type="text" name="email" placeholder="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <h4>Type Of Crop To Be Picked : </h4>
+                                        <input class="form-control" type="text" name="crop" placeholder="Type Of Crop" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <h4>Capacity : </h4>
+                                        <input class="form-control" type="number" name="capacity" required
+                                            placeholder="Capacity">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="../public/javascripts/form.js"></script>
+
+
+<%- include('./partials/footer.ejs'); -%>
